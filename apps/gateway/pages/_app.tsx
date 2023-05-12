@@ -1,18 +1,14 @@
-import { AppProps } from "next/app";
-import Head from "next/head";
-import "./styles.css";
+import { AppProps } from 'next/app';
+// import {utls} from ''
+import './styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
-  return (
+  return(
+
     <>
-      <Head>
-        <title>Welcome to gateway!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </>
-  );
+  <Component {...pageProps} />
+  </>
+    ) 
 }
 
 export default CustomApp;
