@@ -1,10 +1,14 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import React from 'react';
+import React from 'react'
 
-type Props = {};
+type Props = {}
 
 const Sidebar = (props: Props) => {
-  return <div>Sidebar</div>;
-};
+  return (
+    <div className='w-full flex-1 flex flex-col min-h-screen main-border-r'>
+        sidebar sd
+    </div>
+  )
+}
 
-export default Sidebar;
+export default Sidebar

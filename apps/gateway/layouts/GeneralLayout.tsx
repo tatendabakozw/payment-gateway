@@ -108,7 +108,7 @@ const GeneralLayout = ({
         <link rel="apple-touch-icon" href="/images/icon.png" />
         <link rel="canonical" href={`${data.site_url}/${og_url}`} />
       </Head>
-      <div className="w-full flex flex-col">
+      <div className="w-full flex flex-col antialiased">
         <nav>
           <Navbar nav_bg={nav_bg} />
         </nav>

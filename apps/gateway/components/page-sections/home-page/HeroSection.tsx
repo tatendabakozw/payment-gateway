@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import Image from 'next/image';
 import React from 'react';
-import svg_bg from '../../../public/grid-bg1.png';
 import underline from '../../../public/svgs/underline.svg';
-import arrow from '../../../public/svgs/arrow.svg';
 
 type Props = {};
 
