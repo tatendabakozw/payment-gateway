@@ -6,6 +6,9 @@ import express from 'express';
 import * as path from 'path';
 import cors from 'cors';
 import morgan from 'morgan';
+import helmet from 'helmet'
+
+// user defined imports
 import auth from './routes/auth/auth';
 
 // port to listen on development
@@ -21,6 +24,7 @@ const options: cors.CorsOptions = {
 };
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use(helmet())
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('common'));
 app.use(express.json());

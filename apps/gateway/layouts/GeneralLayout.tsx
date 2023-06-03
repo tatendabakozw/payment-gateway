@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Head from 'next/head';
 import React, { ReactNode } from 'react';
+import Footer from '../components/navigation/Footer';
 import Navbar from '../components/navigation/Navbar';
 import { data } from '../utils/data';
 
@@ -16,6 +17,7 @@ type Props = {
   og_image?: any;
   bg_color?: string;
   component_above_navbar?: any;
+  nav_bg?: string;
   og_url?: string;
 };
 
@@ -31,11 +33,14 @@ const GeneralLayout = ({
   og_url,
   bg_color,
   component_above_navbar,
+  nav_bg
 }: Props) => {
   return (
     <>
       <Head>
-        <title>{title ? `${title} | Trolliey ` : data.original_title}</title>
+        <title>
+          {title ? `${title} | ${data.original_title} ` : data.original_title}
+        </title>
         <meta
           name="description"
           content={
@@ -105,10 +110,12 @@ const GeneralLayout = ({
       </Head>
       <div className="w-full flex flex-col">
         <nav>
-          <Navbar/>
+          <Navbar nav_bg={nav_bg} />
         </nav>
         {children}
-        <footer>footer</footer>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   );
