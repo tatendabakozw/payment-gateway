@@ -25,7 +25,7 @@
       "options": {
         "buildTarget": "documentation:build",
         "dev": true,
-        "port": 4202
+        "port": 4201
 
       },
       "configurations": {

@@ -14,7 +14,7 @@
 
 @layer utilities {
   .main-border-r {
-    @apply border-r dark:border-slate-700 border-slate-200;
+    @apply border-r dark:border-slate-800 border-slate-200;
   }
   .bg-primary {
     @apply dark:bg-slate-900 bg-white;
@@ -23,16 +23,16 @@
     @apply dark:bg-slate-800 bg-slate-100;
   }
   .main-border {
-    @apply border dark:border-slate-700 border-slate-200;
+    @apply border dark:border-slate-800 border-slate-200;
   }
   .main-border-l {
-    @apply border-l dark:border-slate-700 border-slate-200;
+    @apply border-l dark:border-slate-800 border-slate-200;
   }
   .main-border-t {
-    @apply border-t dark:border-slate-700 border-slate-200;
+    @apply border-t dark:border-slate-800 border-slate-200;
   }
   .main-border-b {
-    @apply border-b dark:border-slate-700 border-slate-200;
+    @apply border-b dark:border-slate-800 border-slate-200;
   }
   .main-text {
     @apply dark:text-slate-400 text-slate-700;

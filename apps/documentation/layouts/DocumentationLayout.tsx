@@ -10,15 +10,15 @@ type Props = {
 
 const DocumentationLayout: FC<Props> = (props: Props): ReactElement => {
   return (
-    <div className="flex flex-row min-h-screen antialiased">
-      <div className="sidebar w-2/12">
+    <div className="flex flex-row sticky antialiased">
+      <div className="sidebar h-screen sticky top-0 w-2/12">
         <Sidebar />
       </div>
       <div className="flex flex-1 flex-col">
-        <div className="">
+        <div className="sticky top-0">
           <Navbar />
         </div>
-        <div className="flex-1">{props.children}</div>
+        <div className="max-w-7xl w-full mx-auto flex-1 min-h-screen ">{props.children}</div>
         <div className="footer">
           <Footer />
         </div>

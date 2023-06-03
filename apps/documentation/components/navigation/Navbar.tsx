@@ -7,7 +7,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <div className="h-16 main-border-b flex flex-row items-center justify-between px-4">
+    <div className="h-16 sticky top-0 main-border-b flex flex-row items-center justify-between px-4 bg-primary">
       <div className="flex flex-row text-slate-500 space-x-4 items-center main-border rounded-full bg-secondary px-4 py-2">
         <MagnifyingGlassIcon height={16} width={16} />
         <p className="text-sm w-56 ">Find something...</p>
