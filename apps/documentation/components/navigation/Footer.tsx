@@ -6,7 +6,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className="max-w-7xl w-full mx-auto main-border-t py-8 flex flex-row items-center justify-between">
+    <div className="max-w-7xl w-full mx-auto main-border-t py-8 flex flex-row items-center justify-between px-4">
       <p className="text-xs main-text">
         © Copyright 2023. All rights reserved.
       </p>
