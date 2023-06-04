@@ -11,7 +11,7 @@ const OperationsSection = (props: Props) => {
     <div className="w-full min-h-screen grid items-center content-center justify-center overflow-hidden">
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 grid-cols-1 px-2 gap-16 items-center">
         <div className="col-span-1 flex flex-col space-y-6">
-          <div className="flex">
+          <div className="flex pt-8">
             <p className="text-xs p-2 rounded-lg bg-secondary-superlight text-secondary-superdark">
               Finance & operations
             </p>
