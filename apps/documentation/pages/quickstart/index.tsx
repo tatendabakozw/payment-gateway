@@ -3,10 +3,7 @@ import { InformationCircleIcon } from '@heroicons/react/24/solid';
 import DocumentationLayout from '../../layouts/DocumentationLayout';
 import DisplayCodeBlock from '../../components/code-block/CodeBlock';
 
-/* eslint-disable-next-line */
-interface QuickstartProps {}
-
-export function Quickstart(props: QuickstartProps) {
+export function Quickstart() {
   const codeItems = [
     {
       _id: 'javascript',
