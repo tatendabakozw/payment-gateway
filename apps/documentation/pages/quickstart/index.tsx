@@ -101,7 +101,7 @@ composer require protocol/sdk`,
             transactions, the default page length for each client.
           </p>
           <div className="flex max-w-3xl">
-            {/* <DisplayCodeBlock showLineNumbers={true} codeItems={transactionaItems} /> */}
+            <DisplayCodeBlock showLineNumbers={true} codeItems={transactionaItems} />
           </div>
         </div>
       </div>
