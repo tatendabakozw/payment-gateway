@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 import underline from '../../../public/svgs/underline.svg';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -42,9 +43,9 @@ const HeroSection = (props: Props) => {
           laboriosam. Officiis, debitis.
         </p>
         <div className="flex flex-row items-center space-x-4 mx-auto pt-16">
-          <div className="flex cursor-pointer bg-primary-original text-white md:px-8 px-4 py-2 rounded text-sm font-semibold">
+          <Link href="https://payme-docs.vercel.app/" className="flex cursor-pointer bg-primary-original text-white md:px-8 px-4 py-2 rounded text-sm font-semibold">
             Get Started
-          </div>
+          </Link>
           <div className="flex cursor-pointer text-primary-original border rounded md:px-8 px-4 py-2 text-sm font-semibold border-primary-original">
             Join Our Community
           </div>

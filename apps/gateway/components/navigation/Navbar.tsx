@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
+import { Bars3BottomRightIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -22,7 +23,7 @@ const Navbar = (props: Props) => {
     <div
       className={`${
         props.nav_bg ? props.nav_bg : 'bg-white '
-      } grid grid-cols-4 w-full h-16 justify-between items-center max-w-7xl mx-auto`}
+      } grid grid-cols-4 w-full h-16 justify-between items-center max-w-7xl mx-auto px-4`}
     >
       <Link
         href={'/'}
@@ -53,6 +54,9 @@ const Navbar = (props: Props) => {
         <div className="flex cursor-pointer bg-primary-original text-white px-8 py-2 rounded text-sm font-semibold">
           Sign Up
         </div>
+      </div>
+      <div className="md:hidden col-span-3 flex ml-auto ">
+        <Bars3BottomRightIcon height={20} width={20} />
       </div>
     </div>
   );
