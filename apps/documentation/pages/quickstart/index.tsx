@@ -88,7 +88,7 @@ composer require protocol/sdk`,
             following example, you can see how to install each client.
           </p>
           <div className="flex max-w-3xl">
-            <DisplayCodeBlock codeItems={codeItems} />
+            {/* <DisplayCodeBlock codeItems={codeItems} /> */}
           </div>
           <p className="z-10 heading-small pt-8">
             Making your first API request
@@ -101,7 +101,7 @@ composer require protocol/sdk`,
             transactions, the default page length for each client.
           </p>
           <div className="flex max-w-3xl">
-            <DisplayCodeBlock showLineNumbers={true} codeItems={transactionaItems} />
+            {/* <DisplayCodeBlock showLineNumbers={true} codeItems={transactionaItems} /> */}
           </div>
         </div>
       </div>
