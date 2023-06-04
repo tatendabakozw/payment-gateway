@@ -6,7 +6,7 @@ export function Index() {
   const height = useScrollHeight()
   // console.log(height)
   return (
-    <DocumentationLayout scrollheight={height}>
+    <DocumentationLayout title='Documentation' description='Official documenation for the payment gateway' scrollheight={height}>
       <div className="flex min-h-screen">
         {/* <div className="z-0 absolute top-40 -left-4 md:w-96 w-60 md:h-96 h-60 bg-yellow-200 rounded-full blur-3xl opacity-50 mix-blend-multiply animate-blob" />
         <div className="z-0 absolute top-52 -right-52 md:w-96 w-60 md:h-96 h-60 bg-purple-200 rounded-full blur-3xl opacity-50 mix-blend-multiply animate-blob animation-delay-2000" />

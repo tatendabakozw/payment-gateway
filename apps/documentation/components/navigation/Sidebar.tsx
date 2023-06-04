@@ -58,10 +58,33 @@ const Sidebar = (props: Props) => {
         { name: 'Security', location: 'security' },
       ],
     },
+    {
+      name: 'Payment methods',
+      location: '/payment-methods',
+      sections: [
+        { name: 'Payment methods', location: 'payment-methods' },
+        { name: 'Bank accounts', location: 'bank-accounts' },
+        { name: 'Cards', location: 'cards' },
+        { name: 'Sources', location: 'sources' },
+      ],
+    },
   ];
+
+  const sidebar_resources = [
+    {
+      name: 'Payment methods',
+      location: '/payment-methods',
+      sections: [
+        { name: 'Payment methods', location: 'payment-methods' },
+        { name: 'Bank accounts', location: 'bank-accounts' },
+        { name: 'Cards', location: 'cards' },
+        { name: 'Sources', location: 'sources' },
+      ],
+    },
+  ]
   return (
     <div className="w-full flex-1 flex flex-col space-y-2 min-h-screen main-border-r p-4">
-      <p className="heading-text font-bold text-lg pb-4">Gateway</p>
+      <p className="heading-text font-bold text-lg pb-8">Gateway</p>
       <p className="heading-text font-bold heading-text text-sm">Guides</p>
       <Accordion borderColor="transparent" mt={0}>
         {sidebar_pages.map((item, index) => (
