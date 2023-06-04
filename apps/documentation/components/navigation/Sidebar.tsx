@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Accordion,
   AccordionItem,
@@ -7,6 +7,9 @@ import {
   AccordionPanel,
 } from '@chakra-ui/react';
 import { useTheme } from 'next-themes';
+import { data } from '../../utils/data';
+import { useRouter } from 'next/router';
+import { getItemPosition } from '../../helpers/arrayMethods';
 
 type Props = {
   scrollheight?: number;
@@ -14,89 +17,38 @@ type Props = {
 
 const Sidebar = (props: Props) => {
   const { theme } = useTheme();
-  const sidebar_pages = [
-    {
-      name: 'Introduction',
-      location: '/',
-      sections: [
-        { name: 'Guides', location: 'guides' },
-        { name: 'Resources', location: 'resources' },
-      ],
-    },
-    {
-      name: 'Quickstart',
-      location: '/quickstart',
-      sections: [
-        { name: 'Choose your client', location: 'choose-your-client' },
-        { name: 'First API request', location: 'first-api-request' },
-        { name: 'Whats next', location: 'whats-next' },
-      ],
-    },
-    {
-      name: 'SDKs',
-      location: '/sdks',
-      sections: [
-        { name: 'Official libraries', location: 'official-libraries' },
-      ],
-    },
-    {
-      name: 'Authentication',
-      location: '/authentication',
-      sections: [
-        { name: 'Basic authentication', location: 'basic-authentication' },
-        { name: 'OAuth2 with bearer token', location: 'oauth2-with-bearer' },
-        { name: 'Using an SDK', location: 'using-an-sdk' },
-      ],
-    },
-    {
-      name: 'Webhooks',
-      location: '/webhooks',
-      sections: [
-        { name: 'Registering webhooks', location: 'registering-webhooks' },
-        { name: 'Custom webhooks', location: 'custom-webhooks' },
-        { name: 'Event types', location: 'event-types' },
-        { name: 'Security', location: 'security' },
-      ],
-    },
-    {
-      name: 'Payment methods',
-      location: '/payment-methods',
-      sections: [
-        { name: 'Payment methods', location: 'payment-methods' },
-        { name: 'Bank accounts', location: 'bank-accounts' },
-        { name: 'Cards', location: 'cards' },
-        { name: 'Sources', location: 'sources' },
-      ],
-    },
-  ];
+  const [page_index, setPageIndex] = useState<number>();
 
-  const sidebar_resources = [
-    {
-      name: 'Payment methods',
-      location: '/payment-methods',
-      sections: [
-        { name: 'Payment methods', location: 'payment-methods' },
-        { name: 'Bank accounts', location: 'bank-accounts' },
-        { name: 'Cards', location: 'cards' },
-        { name: 'Sources', location: 'sources' },
-      ],
-    },
-  ]
+  const router = useRouter();
+  const { pathname } = router;
+
+  useEffect(() => {
+    setPageIndex(
+      pathname === '/'
+        ? 0
+        : getItemPosition(data.sidebar_pages, pathname.replace('/', ''))
+    );
+  }, [pathname]);
+
+  if (page_index === undefined) {
+    return <div className="flex"></div>;
+  }
+
   return (
-    <div className="w-full flex-1 flex flex-col space-y-2 min-h-screen main-border-r p-4">
-      <p className="heading-text font-bold text-lg pb-8">Gateway</p>
+    <div className="w-full flex-1 flex flex-col space-y-2 md:min-h-screen md:main-border-r md:p-4 p-0">
+      <p className="heading-text md:flex hidden font-bold text-lg pb-8">Gateway</p>
       <p className="heading-text font-bold heading-text text-sm">Guides</p>
-      <Accordion borderColor="transparent" mt={0}>
-        {sidebar_pages.map((item, index) => (
+      <Accordion defaultIndex={[page_index]} borderColor="transparent" mt={0}>
+        {data.sidebar_pages.map((item, index) => (
           <AccordionItem key={index}>
             <AccordionButton
               rounded={'md'}
               _expanded={{
                 bg: theme === 'dark' ? '#1e293b ' : '#f8fafc ',
-                color: theme === "dark" ? '#e2e8f0 ' : '#334155 ',
+                color: theme === 'dark' ? '#e2e8f0 ' : '#334155 ',
                 fontWeight: 'semibold',
               }}
-              textColor={theme === "dark" ? '#94a3b8 ' : '#334155 '}
+              textColor={theme === 'dark' ? '#94a3b8 ' : '#334155 '}
               _hover={{ bg: theme === 'dark' ? '#1e293b' : '#f8fafc ' }}
             >
               <div className="flex text-sm">{item.name}</div>

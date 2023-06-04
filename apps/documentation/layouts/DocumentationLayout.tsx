@@ -5,6 +5,7 @@ import Sidebar from '../components/navigation/Sidebar';
 import Footer from '../components/navigation/Footer';
 import Head from 'next/head';
 import { data } from '../utils/data';
+import PageNavigator from '../components/navigation/PageNavigator';
 
 type Props = {
   title: string;
@@ -20,7 +21,7 @@ type Props = {
   component_above_navbar?: any;
   nav_bg?: string;
   og_url?: string;
-  scrollheight?:number
+  scrollheight?: number;
 };
 
 const DocumentationLayout: FC<Props> = ({
@@ -36,11 +37,14 @@ const DocumentationLayout: FC<Props> = ({
   bg_color,
   component_above_navbar,
   nav_bg,
-  scrollheight
+  scrollheight,
 }: Props): ReactElement => {
+  
+  
+
   return (
     <>
-    <Head>
+      <Head>
         <title>
           {title ? `${data.original_title} | ${title}   ` : data.original_title}
         </title>
@@ -111,21 +115,23 @@ const DocumentationLayout: FC<Props> = ({
         <link rel="apple-touch-icon" href="/images/icon.png" />
         <link rel="canonical" href={`${data.site_url}/${og_url}`} />
       </Head>
-    <div className="flex flex-row sticky antialiased">
-      <div className="sidebar h-screen sticky top-0 w-2/12">
-        <Sidebar scrollheight={scrollheight} />
-      </div>
-      <div className="flex flex-1 flex-col">
-        
-        <div className="sticky top-0">
-          <Navbar />
+      <div className="relative flex flex-row antialiased">
+        <div className="md:block hidden sidebar h-screen sticky top-0 w-2/12">
+          <Sidebar scrollheight={scrollheight} />
         </div>
-        <div className="max-w-7xl w-full mx-auto flex-1 min-h-screen ">{children}</div>
-        <div className="footer">
-          <Footer />
+        <div className="flex flex-1 flex-col">
+          <div className="z-50 sticky top-0">
+            <Navbar />
+          </div>
+          <div className="flex-1 min-h-screen pb-16">
+            {children}
+            <PageNavigator />
+          </div>
+          <div className="footer">
+            <Footer />
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 };
