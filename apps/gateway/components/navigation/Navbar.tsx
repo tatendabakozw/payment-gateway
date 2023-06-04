@@ -14,7 +14,7 @@ const Navbar = (props: Props) => {
   console.log(pathname);
   const nav_options = [
     { title: 'About', link: '/about' },
-    { title: 'Documentation', link: '/docs' },
+    { title: 'Documentation', link: 'https://payme-docs.vercel.app/' },
     { title: 'Pricing', link: '/pricing' },
     { title: 'Contact', link: '/contact' },
   ];

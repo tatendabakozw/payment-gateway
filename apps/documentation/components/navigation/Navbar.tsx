@@ -2,6 +2,7 @@
 import React from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import ThemeToggler from '../buttons/ThemeToggler';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -20,7 +21,7 @@ const Navbar = (props: Props) => {
         <p className='main-link-text'>Support</p>
         <div className="main-border-r h-6" />
         <ThemeToggler />
-        <div className="flex border border-primary-light bg-primary-superdark text-primary-light px-4 py-1 text-sm rounded-full font-semibold">Sign in</div>
+        <Link href={'https://pay-me-pi.vercel.app/login'} className="flex border border-primary-light bg-primary-superdark text-primary-light px-4 py-1 text-sm rounded-full font-semibold">Sign in</Link>
       </div>
     </div>
   );
