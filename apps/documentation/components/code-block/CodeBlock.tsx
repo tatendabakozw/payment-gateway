@@ -66,12 +66,17 @@ const DisplayCodeBlock = (props: Props) => {
         language={selected_language}
         style={atomOneDark}
         showLineNumbers={props.showLineNumbers}
+        showInlineLineNumbers={true}
+        lineProps={{
+          style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' },
+        }}
         codeTagProps={{ style: { fontFamily: 'Monaco, Menlo, Consolas, "Droid Sans Mono", "Inconsolata", "Courier New", monospace', fontSize: '0.9rem' } }}
         customStyle={{
           padding: '1.5rem',
           width: '100%',
           backgroundColor: '#020617',
         }}
+        wrapLines={true}
       >
         {getFromArray(props.codeItems, selected_language)?.code}
         {/* {props.codeItems.code} */}
