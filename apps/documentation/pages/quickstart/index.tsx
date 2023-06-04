@@ -3,7 +3,7 @@ import { InformationCircleIcon } from '@heroicons/react/24/solid';
 import DocumentationLayout from '../../layouts/DocumentationLayout';
 import DisplayCodeBlock from '../../components/code-block/CodeBlock';
 
-export function Quickstart() {
+function Quickstart() {
   const codeItems = [
     {
       _id: 'javascript',
