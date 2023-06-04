@@ -67,4 +67,11 @@ export const data = {
       _id: 'payment-methods',
     },
   ],
+  supported_languages:[
+    {name: 'Javascript', _id: 'javascript'},
+    {name: 'Python', _id: 'python'},
+    {name: 'PHP', _id: 'php'},
+    {name: 'cURL', _id: 'curl'},
+
+  ]
 };

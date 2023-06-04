@@ -10,3 +10,13 @@ export type Page = {
   sections: Array<PageSections>;
   _id: string;
 };
+
+export type LanguageType = {
+  name: string;
+  _id: string;
+};
+
+export type CodeItemType = {
+  code: string;
+  _id: string;
+};
