@@ -60,7 +60,7 @@ export function Index() {
             Guides
           </p>
           <div className="flex flex-col main-border-t pt-8">
-            <div className="grid md:grid-cols-4 grid-cols-1 md:gap-8 gap-2">
+            <div className="grid md:grid-cols-4 grid-cols-1 gap-8">
               <GuidesItem
                 heading="Authentication"
                 description="Learn how to authenticate your API requests."

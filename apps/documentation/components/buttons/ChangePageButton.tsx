@@ -14,7 +14,7 @@ type Props = {
 
 const ChangePageButton = (props: Props) => {
   return (
-    <Link href={props.location} className="flex flex-col space-y-2">
+    <Link href={props.location} className="flex flex-col items-center space-y-2">
       {props.position === 'left' ? (
         <ButtonItem
           icon={<ArrowSmallLeftIcon height={16} width={16} />}
@@ -27,7 +27,7 @@ const ChangePageButton = (props: Props) => {
           text="Next"
         />
       )}
-      <p className="heading-text font-bold text-lg">{props.pageText}</p>
+      <p className="heading-text font-bold md:text-lg text-md">{props.pageText}</p>
     </Link>
   );
 };
