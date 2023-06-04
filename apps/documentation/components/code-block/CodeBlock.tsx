@@ -4,12 +4,12 @@ import { CheckIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 import { data } from '../../utils/data';
 import React, { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { getFromArray } from '../../helpers/arrayMethods';
-import { CodeItemType } from '../../utils/types';
+// import { CodeItemType } from '../../utils/types';
 
 type Props = {
-  codeItems: CodeItemType[];
+  codeItems: any;
   showLineNumbers?: boolean;
 };
 
