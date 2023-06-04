@@ -73,6 +73,7 @@ const DisplayCodeBlock = (props: Props) => {
           width: '100%',
           backgroundColor: '#020617',
         }}
+        wrapLongLines={true}
       >
         {getFromArray(props.codeItems, selected_language)?.code}
         {/* {props.codeItems.code} */}
