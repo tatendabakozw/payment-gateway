@@ -6,15 +6,17 @@ import Footer from '../components/navigation/Footer';
 
 type Props = {
   children?: ReactNode;
+  scrollheight?:number
 };
 
 const DocumentationLayout: FC<Props> = (props: Props): ReactElement => {
   return (
     <div className="flex flex-row sticky antialiased">
       <div className="sidebar h-screen sticky top-0 w-2/12">
-        <Sidebar />
+        <Sidebar scrollheight={props.scrollheight} />
       </div>
       <div className="flex flex-1 flex-col">
+        
         <div className="sticky top-0">
           <Navbar />
         </div>

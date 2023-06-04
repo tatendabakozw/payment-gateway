@@ -18,7 +18,7 @@ const ThemeToggler = (props: Props) => {
 
   return (
     <button
-      onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
+      onClick={() => (currentTheme === 'dark' ? setTheme('light') : setTheme('dark'))}
       className=" transition-all cursor-pointer duration-100 main-link-text dark:hover:bg-slate-800 hover:bg-slate-100 p-1 rounded-full"
     >
       {currentTheme === 'dark' ? (
