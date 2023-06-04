@@ -4,7 +4,7 @@ import DocumentationLayout from '../../layouts/DocumentationLayout';
 import DisplayCodeBlock from '../../components/code-block/CodeBlock';
 
 /* eslint-disable-next-line */
-export interface QuickstartProps {}
+interface QuickstartProps {}
 
 export function Quickstart(props: QuickstartProps) {
   const codeItems = [
