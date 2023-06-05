@@ -1,15 +1,10 @@
-import styles from './index.module.css';
+import DashboardLayout from "../layouts/DashboardLayout";
 
 export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.css file.
-   */
   return (
- <div className="flex bg-green-200 p-4 w-full">
+ <DashboardLayout>
   Dashboard Here
- </div>
+ </DashboardLayout>
   );
 }
 

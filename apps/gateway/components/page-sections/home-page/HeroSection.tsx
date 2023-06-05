@@ -11,9 +11,9 @@ const HeroSection = (props: Props) => {
     <main className="app min-h-screen w-full relative overflow-hidden">
       <div
         className="min-h-screen md:px-2 px-4 z-10 relative bg-none hero-section max-w-7xl mx-auto w-full grid items-center content-center justify-center">
-        <div className="z-0 absolute top-40 -left-4 md:w-96 w-60 md:h-96 h-60 bg-yellow-200 rounded-full blur-3xl opacity-50 mix-blend-multiply animate-blob" />
-        <div className="z-0 absolute top-52 -right-52 md:w-96 w-60 md:h-96 h-60 bg-purple-200 rounded-full blur-3xl opacity-50 mix-blend-multiply animate-blob animation-delay-2000" />
-        <div className="z-0 absolute -bottom-8 left-20 md:w-96 w-60 md:h-96 h-60 bg-pink-200 rounded-full blur-3xl opacity-50 mix-blend-multiply animate-blob animation-delay-4000" />
+        <div className="z-0 absolute top-40 -left-4 md:w-96 w-60 md:h-96 h-60 bg-primary-superlight rounded-full blur-3xl opacity-75 mix-blend-multiply animate-blob" />
+        <div className="z-0 absolute top-52 -right-52 md:w-96 w-60 md:h-96 h-60 bg-purple-200 rounded-full blur-3xl opacity-75 mix-blend-multiply animate-blob animation-delay-2000" />
+        <div className="z-0 absolute -bottom-8 left-20 md:w-96 w-60 md:h-96 h-60 bg-secondary-superlight rounded-full blur-3xl opacity-75 mix-blend-multiply animate-blob animation-delay-4000" />
         
         <p className="uppercase z-10 text-secondary-dark text-center text-sm font-semibold">
           payment processing in a neater way
