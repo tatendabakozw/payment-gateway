@@ -10,11 +10,15 @@ import helmet from 'helmet'
 
 // user defined imports
 import auth from './routes/auth/auth';
+import { connectDB } from './config/mongo';
 
 // port to listen on development
 const port = process.env.PORT || 3333;
 
 const app = express();
+
+// connect database
+connectDB()
 
 // cors option
 const allowedOrigins = ['http://localhost:3000'];
