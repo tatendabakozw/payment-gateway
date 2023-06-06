@@ -6,6 +6,7 @@ import {
   atelierCaveDark,
   dracula,
 } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import CodeBlock from '../../code-block/CodeBlock';
 
 type Props = {};
 
@@ -70,17 +71,7 @@ const ServicesSection = (props: Props) => {
               </div>
             </div>
             <div className="col-span-1 w-full flex flex-nowrap  overflow-auto">
-              <SyntaxHighlighter
-                language="javascript"
-                style={dracula}
-                showLineNumbers="true"
-                customStyle={{
-                  borderRadius: '5px',
-                  backgroundColor: '#21323e',
-                }}
-              >
-                {codeString}
-              </SyntaxHighlighter>
+              <CodeBlock />
             </div>
           </div>
         </div>

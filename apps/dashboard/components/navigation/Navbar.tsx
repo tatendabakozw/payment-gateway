@@ -2,6 +2,7 @@
 import React from 'react';
 import ProjectsMenu from '../menus/ProjectsMenu';
 import ThemeToggler from '../buttons/ThemeToggle';
+import { Avatar } from '@chakra-ui/react';
 
 type Props = {};
 
@@ -23,6 +24,7 @@ const Navbar = (props: Props) => {
         </div>
         <div className="flex-1" />
         <ThemeToggler />
+        <Avatar size={'xs'} name="username"/>
       </div>
     </div>
   );
