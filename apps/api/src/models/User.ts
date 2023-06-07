@@ -1,10 +1,15 @@
+/* eslint-disable @typescript-eslint/no-this-alias */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 
 const userSchema = new mongoose.Schema(
   {
     email: {
       type: String,
       required: true,
+      unique: true,
     },
     password: {
       type: String,
@@ -23,7 +28,7 @@ const userSchema = new mongoose.Schema(
     },
     emailVerified: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     confirmationCode: {
       type: String,
@@ -42,5 +47,21 @@ const userSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+// encrypt password before saving
+userSchema.pre('save', async function (next) {
+  const user = this;
+  const hash = await bcrypt.hash(this.password, 10);
+
+  this.password = hash;
+  next();
+});
+
+userSchema.methods.isValidPassword = async function (password) {
+  const user = this;
+  const compare = await bcrypt.compare(password, user.password);
+
+  return compare;
+};
 
 export const User = mongoose.model('User', userSchema);

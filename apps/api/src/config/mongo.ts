@@ -1,6 +1,6 @@
 import mongoose, { ConnectOptions } from 'mongoose';
 mongoose.set('strictQuery', false);
-const mongoUrl = `mongodb://localhost:27017/test`;
+const mongoUrl = `mongodb://localhost:27017/gateway_DB`;
 
 export const connectDB = async () => {
   try {

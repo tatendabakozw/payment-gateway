@@ -7,6 +7,9 @@ import * as path from 'path';
 import cors from 'cors';
 import morgan from 'morgan';
 import helmet from 'helmet'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 // user defined imports
 import auth from './routes/auth/auth';
