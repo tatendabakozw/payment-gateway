@@ -1,6 +1,6 @@
 /**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
+ * API for payment gateway 
+ * Written by Tatenda Bako
  */
 import express from 'express';
 import * as path from 'path';
@@ -13,6 +13,7 @@ dotenv.config()
 
 // user defined imports
 import auth from './routes/auth/auth';
+import user from './routes/user/user'
 import { connectDB } from './config/mongo';
 
 // port to listen on development
@@ -43,6 +44,7 @@ app.get('/api', (req, res) => {
 
 // user defined routes
 app.use('/api/auth', auth);
+app.use('/api/user', user);
 
 //not found handler
 app.use((req, res, next) => {
