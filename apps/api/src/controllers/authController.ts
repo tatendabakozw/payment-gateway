@@ -1,4 +1,6 @@
 import { validationResult } from 'express-validator';
+import { Request, Response } from 'express';
+import { IUser } from '../utils/types';
 import { User } from '../models/User';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
@@ -6,8 +8,8 @@ import bcrypt from 'bcrypt';
 // register user
 // post request
 // /api/auth/register
-export const registerUser = async (req, res, next) => {
-  const { email, password, fullName, agreed } = req.body;
+export const registerUser = async (req:Request, res:Response, next) => {
+  const { email, password, fullName, agreed }:IUser = req.body;
 
   const result = validationResult(req);
   const errors: any[] = result.array();
