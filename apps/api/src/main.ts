@@ -38,7 +38,7 @@ app.use(morgan('common'));
 app.use(express.json());
 app.use(cors(options));
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   res.send({ message: 'Welcome to gateway api!' });
 });
 
